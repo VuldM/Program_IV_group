@@ -1,0 +1,22 @@
+{
+  "name": "IV группа по элетробезопасности",
+  "description": "Прогамма подготовки к подтверждению на 4 группу по элетробезопасности АО СЛПК",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_icon": {
+      "16": "./img/78.ico",
+      "32": "./img/78.ico",
+      "48": "./img/78.ico",
+      "128": "./img/78.ico"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "./img/78.ico",
+    "32": "./img/78.ico",
+    "48": "./img/78.ico",
+    "128": "./img/78.ico"
+  }
+}
