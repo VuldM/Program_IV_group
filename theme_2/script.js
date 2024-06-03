@@ -122,7 +122,9 @@ function checkTheme() {
     "beforeend",
     ` <div class="buttuns">
      <button class="btnEl">Проверить</button>
-    <button class="back btnEl">Назад</button>      
+    <button class="back_quest btnEl">Назад</button>  
+    <button class="back btnEl">К списку тем</button>      
+
     </div>
    
     
@@ -130,6 +132,7 @@ function checkTheme() {
   );
 
   const checkBtnEl = document.querySelector(".btnEl");
+  const backQuest = document.querySelector(".back_quest");
   const backBtnEl = document.querySelector(".back");
   checkBtnEl.addEventListener("click", () => {
     if (errorsAnswers.length > j) {
@@ -140,6 +143,13 @@ function checkTheme() {
       alert("Вы закончили курс");
       window.location = "../index.html";
       return;
+    }
+  });
+  backQuest.addEventListener("click", () => {
+    if (j > 0) {
+      j--;
+      i--;
+      checkTheme();
     }
   });
   backBtnEl.addEventListener("click", () => {

@@ -72,15 +72,28 @@
   display: flex;
   gap: 20px;
 }
+.main__radio_5 {
+  padding-bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+.main__radio_6 {
+  padding-bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
 .main__radio_joint p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 16px;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.54;
   letter-spacing: normal;
   text-align: left;
-  font-weight: 400;
+  font-weight: 550;
   color: #37474f;
   padding: 10px 16px;
   text-align: justify;
@@ -88,7 +101,7 @@
 .main__tasks {
   width: 100%;
   padding-top: 15px;
-  padding-bottom: 0;
+  padding-bottom: 50px;
   padding-left: calc(20% - 20px);
   padding-right: 15%;
 }
