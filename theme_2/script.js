@@ -16,7 +16,7 @@ dataLists.forEach((element) => {
   j++;
 });
 const mainTasks = document.querySelector(".main__tasks");
-j = 6;
+j = 0;
 let i = errorsAnswers[j];
 checkTheme();
 backLight();
@@ -364,9 +364,10 @@ function checkAnswer() {
       // если он выбран
       if (dataLists[i].check) {
         //если это checkbox
+        check_1 = true;
         if (dataLists[i].var.one) {
           //если первый варриант правильный
-          check_1 = true;
+
           divMainAnswer1.classList.add("main__color_true");
         } else {
           // если этот варриант не правильный
@@ -404,8 +405,8 @@ function checkAnswer() {
   if (dataLists[i].answer2) {
     if (inputAnswer2.checked) {
       if (dataLists[i].check) {
+        check_2 = true;
         if (dataLists[i].var.two) {
-          check_2 = true;
           divMainAnswer2.classList.add("main__color_true");
         } else {
           divMainAnswer2.classList.add("main__color_false");
@@ -438,8 +439,8 @@ function checkAnswer() {
   if (dataLists[i].answer3) {
     if (inputAnswer3.checked) {
       if (dataLists[i].check) {
+        check_3 = true;
         if (dataLists[i].var.three) {
-          check_3 = true;
           divMainAnswer3.classList.add("main__color_true");
         } else {
           divMainAnswer3.classList.add("main__color_false");
@@ -472,8 +473,8 @@ function checkAnswer() {
   if (dataLists[i].answer4) {
     if (inputAnswer4.checked) {
       if (dataLists[i].check) {
+        check_4 = true;
         if (dataLists[i].var.four) {
-          check_4 = true;
           divMainAnswer4.classList.add("main__color_true");
         } else {
           divMainAnswer4.classList.add("main__color_false");
@@ -547,10 +548,9 @@ function checkAnswer() {
       }
     }
   }
-
   if (
-    (dataLists[i].id === 7 && check_2 && check_3 && check_4) ||
-    (dataLists[i].id === 50 && check_1 && check_2)
+    (dataLists[i].id === 7 && !check_1 && check_2 && check_3 && check_4) ||
+    (dataLists[i].id === 50 && check_1 && check_2 && !check_3)
   ) {
     j++;
     i = errorsAnswers[j];
