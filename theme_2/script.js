@@ -16,7 +16,7 @@ dataLists.forEach((element) => {
   j++;
 });
 const mainTasks = document.querySelector(".main__tasks");
-j = 0;
+j = 6;
 let i = errorsAnswers[j];
 checkTheme();
 backLight();
@@ -35,9 +35,22 @@ function checkTheme() {
 `
   );
   if (dataLists[i].answer1) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
+    if (dataLists[i].check) {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        `<div class="main__radio_1">
+        <input type="checkbox" name="answer" id="answer_01" />
+       <label for="answer_01"
+         ><div class="main__answer_1 main__radio_joint">
+           <p>${dataLists[i].answer1}</p>
+         </div></label>
+    </div>
       `
+      );
+    } else {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        `
   <div class="main__radio_1">
   <input type="radio" name="answer" id="answer_01" />
  <label for="answer_01"
@@ -45,12 +58,28 @@ function checkTheme() {
      <p>${dataLists[i].answer1}</p>
    </div></label>
   `
-    );
+      );
+    }
   }
   if (dataLists[i].answer2) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      `
+    if (dataLists[i].check) {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        `
+    </div>
+    <div class="main__radio_2">  
+    <input type="checkbox" name="answer" id="answer_02" />
+    <label for="answer_02"
+      ><div class="main__answer_2 main__radio_joint">
+        <p>${dataLists[i].answer2}</p>
+      </div></label>
+  
+    `
+      );
+    } else {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        `
   </div>
   <div class="main__radio_2">  
   <input type="radio" name="answer" id="answer_02" />
@@ -60,12 +89,27 @@ function checkTheme() {
     </div></label>
 
   `
-    );
+      );
+    }
   }
   if (dataLists[i].answer3) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      `
+    if (dataLists[i].check) {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        `
+    </div>
+    <div class="main__radio_3">
+     <input type="checkbox" name="answer" id="answer_03" />
+    <label for="answer_03"
+      ><div class="main__answer_3 main__radio_joint">
+        <p>${dataLists[i].answer3}</p>
+      </div></label>  
+    `
+      );
+    } else {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        `
     </div>
     <div class="main__radio_3">
      <input type="radio" name="answer" id="answer_03" />
@@ -74,12 +118,27 @@ function checkTheme() {
         <p>${dataLists[i].answer3}</p>
       </div></label>  
     `
-    );
+      );
+    }
   }
   if (dataLists[i].answer4) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      ` </div>
+    if (dataLists[i].check) {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        ` </div>
+        <div class="main__radio_4">
+         <input type="checkbox" name="answer" id="answer_04" />
+        <label for="answer_04"
+          ><div class="main__answer_4 main__radio_joint">
+            <p>${dataLists[i].answer4}</p>
+          </div></label>
+        </div>       
+        `
+      );
+    } else {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        ` </div>
       <div class="main__radio_4">
        <input type="radio" name="answer" id="answer_04" />
       <label for="answer_04"
@@ -88,12 +147,27 @@ function checkTheme() {
         </div></label>
       </div>       
       `
-    );
+      );
+    }
   }
   if (dataLists[i].answer5) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      ` </div>
+    if (dataLists[i].check) {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        ` </div>
+     <div class="main__radio_5">
+      <input type="checkbox" name="answer" id="answer_05" />
+     <label for="answer_05"
+       ><div class="main__answer_5 main__radio_joint">
+         <p>${dataLists[i].answer5}</p>
+       </div></label>
+     </div>       
+     `
+      );
+    } else {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        ` </div>
      <div class="main__radio_5">
       <input type="radio" name="answer" id="answer_05" />
      <label for="answer_05"
@@ -102,12 +176,27 @@ function checkTheme() {
        </div></label>
      </div>       
      `
-    );
+      );
+    }
   }
   if (dataLists[i].answer6) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      ` </div>
+    if (dataLists[i].check) {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        ` </div>
+       <div class="main__radio_6">
+        <input type="checkbox" name="answer" id="answer_06" />
+       <label for="answer_06"
+         ><div class="main__answer_6 main__radio_joint">
+           <p>${dataLists[i].answer6}</p>
+         </div></label>
+       </div>       
+       `
+      );
+    } else {
+      mainInsert.insertAdjacentHTML(
+        "beforeend",
+        ` </div>
      <div class="main__radio_6">
       <input type="radio" name="answer" id="answer_06" />
      <label for="answer_06"
@@ -116,7 +205,8 @@ function checkTheme() {
        </div></label>
      </div>       
      `
-    );
+      );
+    }
   }
   mainInsert.insertAdjacentHTML(
     "beforeend",
@@ -260,97 +350,164 @@ function backLight() {
   }
 }
 function checkAnswer() {
+  let check_1 = false;
+  let check_2 = false;
+  let check_3 = false;
+  let check_4 = false;
+  let check_5 = false;
+  let check_6 = false;
+  const inputAnswer1 = document.querySelector('input[id="answer_01"]');
+  const divMainAnswer1 = document.querySelector(".main__answer_1");
   if (dataLists[i].answer1) {
-    const inputAnswer1 = document.querySelector('input[id="answer_01"]');
-    const divMainAnswer1 = document.querySelector(".main__answer_1");
-
+    // если есть первый вопрос
     if (inputAnswer1.checked) {
-      if (dataLists[i].var === 1) {
-        j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
-          checkTheme();
+      // если он выбран
+      if (dataLists[i].check) {
+        //если это checkbox
+        if (dataLists[i].var.one) {
+          //если первый варриант правильный
+          check_1 = true;
+          divMainAnswer1.classList.add("main__color_true");
+        } else {
+          // если этот варриант не правильный
+          divMainAnswer1.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
         }
-
-        return;
       } else {
-        divMainAnswer1.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        //если это не checkbox, а радио кнопка
+        if (dataLists[i].var === 1) {
+          // если варриант правильный
+          j++;
+          i = errorsAnswers[j];
+          if (errorsAnswers.length !== j) {
+            checkTheme();
+          }
+          return;
+        } else {
+          // если этот варриант не правильный
+          divMainAnswer1.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
+        }
       }
     } else {
+      //если этот вариант ответа не выбран
       if (dataLists[i].var === 1) {
+        divMainAnswer1.classList.add("main__color_true");
+      }
+      if (dataLists[i].var.one) {
         divMainAnswer1.classList.add("main__color_true");
       }
     }
   }
+  const inputAnswer2 = document.querySelector('input[id="answer_02"]');
+  const divMainAnswer2 = document.querySelector(".main__answer_2");
   if (dataLists[i].answer2) {
-    const inputAnswer2 = document.querySelector('input[id="answer_02"]');
-    const divMainAnswer2 = document.querySelector(".main__answer_2");
     if (inputAnswer2.checked) {
-      if (dataLists[i].var === 2) {
-        j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
-          checkTheme();
+      if (dataLists[i].check) {
+        if (dataLists[i].var.two) {
+          check_2 = true;
+          divMainAnswer2.classList.add("main__color_true");
+        } else {
+          divMainAnswer2.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
         }
-        return;
       } else {
-        divMainAnswer2.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        if (dataLists[i].var === 2) {
+          j++;
+          i = errorsAnswers[j];
+          if (errorsAnswers.length !== j) {
+            checkTheme();
+          }
+          return;
+        } else {
+          divMainAnswer2.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
+        }
       }
     } else {
       if (dataLists[i].var === 2) {
         divMainAnswer2.classList.add("main__color_true");
       }
+      if (dataLists[i].var.two) {
+        divMainAnswer2.classList.add("main__color_true");
+      }
     }
   }
+  const inputAnswer3 = document.querySelector('input[id="answer_03"]');
+  const divMainAnswer3 = document.querySelector(".main__answer_3");
   if (dataLists[i].answer3) {
-    const inputAnswer3 = document.querySelector('input[id="answer_03"]');
-    const divMainAnswer3 = document.querySelector(".main__answer_3");
     if (inputAnswer3.checked) {
-      if (dataLists[i].var === 3) {
-        j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
-          checkTheme();
+      if (dataLists[i].check) {
+        if (dataLists[i].var.three) {
+          check_3 = true;
+          divMainAnswer3.classList.add("main__color_true");
+        } else {
+          divMainAnswer3.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
         }
-        return;
       } else {
-        divMainAnswer3.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        if (dataLists[i].var === 3) {
+          j++;
+          i = errorsAnswers[j];
+          if (errorsAnswers.length !== j) {
+            checkTheme();
+          }
+          return;
+        } else {
+          divMainAnswer3.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
+        }
       }
     } else {
       if (dataLists[i].var === 3) {
         divMainAnswer3.classList.add("main__color_true");
       }
+      if (dataLists[i].var.three) {
+        divMainAnswer3.classList.add("main__color_true");
+      }
     }
   }
+  const inputAnswer4 = document.querySelector('input[id="answer_04"]');
+  const divMainAnswer4 = document.querySelector(".main__answer_4");
   if (dataLists[i].answer4) {
-    const inputAnswer4 = document.querySelector('input[id="answer_04"]');
-    const divMainAnswer4 = document.querySelector(".main__answer_4");
     if (inputAnswer4.checked) {
-      if (dataLists[i].var === 4) {
-        j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
-          checkTheme();
+      if (dataLists[i].check) {
+        if (dataLists[i].var.four) {
+          check_4 = true;
+          divMainAnswer4.classList.add("main__color_true");
+        } else {
+          divMainAnswer4.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
         }
-        return;
       } else {
-        divMainAnswer4.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        if (dataLists[i].var === 4) {
+          j++;
+          i = errorsAnswers[j];
+          if (errorsAnswers.length !== j) {
+            checkTheme();
+          }
+          return;
+        } else {
+          divMainAnswer4.classList.add("main__color_false");
+          errorsAnswers.push(dataLists[i].id);
+        }
       }
     } else {
       if (dataLists[i].var === 4) {
         divMainAnswer4.classList.add("main__color_true");
       }
+      if (dataLists[i].var.four) {
+        divMainAnswer4.classList.add("main__color_true");
+      }
     }
   }
+  const inputAnswer5 = document.querySelector('input[id="answer_05"]');
+  const divMainAnswer5 = document.querySelector(".main__answer_5");
   if (dataLists[i].answer5) {
-    const inputAnswer5 = document.querySelector('input[id="answer_05"]');
-    const divMainAnswer5 = document.querySelector(".main__answer_5");
     if (inputAnswer5.checked) {
       if (dataLists[i].var === 5) {
+        console.log(inputAnswer5.checked);
+
         j++;
         i = errorsAnswers[j];
         if (errorsAnswers.length !== j) {
@@ -366,5 +523,40 @@ function checkAnswer() {
         divMainAnswer5.classList.add("main__color_true");
       }
     }
+  }
+  const inputAnswer6 = document.querySelector('input[id="answer_06"]');
+  const divMainAnswer6 = document.querySelector(".main__answer_6");
+  if (dataLists[i].answer6) {
+    if (inputAnswer6.checked) {
+      if (dataLists[i].var === 6) {
+        console.log(inputAnswer6.checked);
+
+        j++;
+        i = errorsAnswers[j];
+        if (errorsAnswers.length !== j) {
+          checkTheme();
+        }
+        return;
+      } else {
+        divMainAnswer6.classList.add("main__color_false");
+        errorsAnswers.push(dataLists[i].id);
+      }
+    } else {
+      if (dataLists[i].var === 6) {
+        divMainAnswer5.classList.add("main__color_true");
+      }
+    }
+  }
+
+  if (
+    (dataLists[i].id === 7 && check_2 && check_3 && check_4) ||
+    (dataLists[i].id === 50 && check_1 && check_2)
+  ) {
+    j++;
+    i = errorsAnswers[j];
+    if (errorsAnswers.length !== j) {
+      checkTheme();
+    }
+    return;
   }
 }
