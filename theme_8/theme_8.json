@@ -1,0 +1,511 @@
+[
+  {
+    "id": 0,
+    "question": "Укажите, в какие сроки проводится проверка знаний вновь назначенных на должность работников, относящихся к категории административно-технического персонала или вспомогательного персонала?",
+    "answer1": "Hе позднее 1 месяца после назначения на должность",
+    "answer2": "Не позднее cрока, определенного программой подготовки на должность вновь назначенного работника",
+    "answer3": "Не позднее cрока, определенного приказом по предприятию в зависимости от квалификации вновь назначенного работника",
+
+    "var": 1
+  },
+  {
+    "id": 1,
+    "question": "От каких факторов зависит необходимость и длительность каждого этапа подготовки по новой должности оперативного персонала?",
+    "answer1": "От стажа практической работы по смежным должностям",
+    "answer2": "От уровня профессионального образования работника и уровня его знаний",
+    "answer3": "От технической сложности объекта",
+    "answer4": "От всего перечисленного",
+
+    "var": 4
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  },
+  {
+    "id": 0,
+    "question": "",
+    "answer1": "",
+    "answer2": "",
+    "answer3": "",
+    "answer4": "",
+
+    "var": 0
+  }
+]
