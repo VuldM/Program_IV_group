@@ -8,16 +8,25 @@ async function fetchData(url) {
     console.error(`error -> ${error}`);
   }
 }
-let errorsAnswers = [];
+function Shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+let idElements = [];
+let idElementsNew = [];
 let j = 0;
 const dataLists = await fetchData(url);
 dataLists.forEach((element) => {
-  errorsAnswers[j] = element.id;
+  idElements[j] = element.id;
   j++;
 });
 const mainTasks = document.querySelector(".main__tasks");
 j = 0;
-let i = errorsAnswers[j];
+idElementsNew = Shuffle(idElements);
+let i = idElementsNew[j];
 checkTheme();
 backLight();
 function checkTheme() {
@@ -34,10 +43,14 @@ function checkTheme() {
   <div class="main__question"><p>${dataLists[i].question}</p></div>
 `
   );
-  if (dataLists[i].answer1) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      `
+  const numberCount = [1, 2, 3, 4, 5, 6];
+  let displayEl = Shuffle(numberCount);
+  displayEl.forEach((element) => {
+    if (element === 1) {
+      if (dataLists[i].answer1) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          `
   <div class="main__radio_1">
   <input type="radio" name="answer" id="answer_01" />
  <label for="answer_01"
@@ -45,12 +58,14 @@ function checkTheme() {
      <p>${dataLists[i].answer1}</p>
    </div></label>
   `
-    );
-  }
-  if (dataLists[i].answer2) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      `
+        );
+      }
+    }
+    if (element === 2) {
+      if (dataLists[i].answer2) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          `
   </div>
   <div class="main__radio_2">  
   <input type="radio" name="answer" id="answer_02" />
@@ -60,12 +75,14 @@ function checkTheme() {
     </div></label>
 
   `
-    );
-  }
-  if (dataLists[i].answer3) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      `
+        );
+      }
+    }
+    if (element === 3) {
+      if (dataLists[i].answer3) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          `
     </div>
     <div class="main__radio_3">
      <input type="radio" name="answer" id="answer_03" />
@@ -74,12 +91,14 @@ function checkTheme() {
         <p>${dataLists[i].answer3}</p>
       </div></label>  
     `
-    );
-  }
-  if (dataLists[i].answer4) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      ` </div>
+        );
+      }
+    }
+    if (element === 4) {
+      if (dataLists[i].answer4) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          ` </div>
       <div class="main__radio_4">
        <input type="radio" name="answer" id="answer_04" />
       <label for="answer_04"
@@ -88,12 +107,14 @@ function checkTheme() {
         </div></label>
       </div>       
       `
-    );
-  }
-  if (dataLists[i].answer5) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      ` </div>
+        );
+      }
+    }
+    if (element === 5) {
+      if (dataLists[i].answer5) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          ` </div>
      <div class="main__radio_5">
       <input type="radio" name="answer" id="answer_05" />
      <label for="answer_05"
@@ -102,12 +123,14 @@ function checkTheme() {
        </div></label>
      </div>       
      `
-    );
-  }
-  if (dataLists[i].answer6) {
-    mainInsert.insertAdjacentHTML(
-      "beforeend",
-      ` </div>
+        );
+      }
+    }
+    if (element === 6) {
+      if (dataLists[i].answer6) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          ` </div>
      <div class="main__radio_6">
       <input type="radio" name="answer" id="answer_06" />
      <label for="answer_06"
@@ -116,8 +139,10 @@ function checkTheme() {
        </div></label>
      </div>       
      `
-    );
-  }
+        );
+      }
+    }
+  });
   mainInsert.insertAdjacentHTML(
     "beforeend",
     ` <div class="buttuns">
@@ -132,12 +157,12 @@ function checkTheme() {
   const backQuest = document.querySelector(".back_quest");
   const backBtnEl = document.querySelector(".back");
   checkBtnEl.addEventListener("click", () => {
-    if (errorsAnswers.length > j) {
+    if (idElementsNew.length > j) {
       checkAnswer();
       backLight();
     }
-    if (errorsAnswers.length == j) {
-      alert("Вы закончили курс");
+    if (idElementsNew.length == j) {
+      alert("Вы закончили эту тему");
       window.location = "../index.html";
 
       return;
@@ -146,8 +171,10 @@ function checkTheme() {
   backQuest.addEventListener("click", () => {
     if (j > 0) {
       j--;
-      i--;
+      i = idElementsNew[j];
       checkTheme();
+    } else {
+      alert("Вы достигли начала темы");
     }
   });
   backBtnEl.addEventListener("click", () => {
@@ -265,15 +292,15 @@ function checkAnswer() {
     if (inputAnswer1.checked) {
       if (dataLists[i].var === 1) {
         j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
+        i = idElementsNew[j];
+        if (idElementsNew.length !== j) {
           checkTheme();
         }
 
         return;
       } else {
         divMainAnswer1.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        idElementsNew.push(dataLists[i].id);
       }
     } else {
       if (dataLists[i].var === 1) {
@@ -287,14 +314,14 @@ function checkAnswer() {
     if (inputAnswer2.checked) {
       if (dataLists[i].var === 2) {
         j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
+        i = idElementsNew[j];
+        if (idElementsNew.length !== j) {
           checkTheme();
         }
         return;
       } else {
         divMainAnswer2.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        idElementsNew.push(dataLists[i].id);
       }
     } else {
       if (dataLists[i].var === 2) {
@@ -308,14 +335,14 @@ function checkAnswer() {
     if (inputAnswer3.checked) {
       if (dataLists[i].var === 3) {
         j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
+        i = idElementsNew[j];
+        if (idElementsNew.length !== j) {
           checkTheme();
         }
         return;
       } else {
         divMainAnswer3.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        idElementsNew.push(dataLists[i].id);
       }
     } else {
       if (dataLists[i].var === 3) {
@@ -329,14 +356,14 @@ function checkAnswer() {
     if (inputAnswer4.checked) {
       if (dataLists[i].var === 4) {
         j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
+        i = idElementsNew[j];
+        if (idElementsNew.length !== j) {
           checkTheme();
         }
         return;
       } else {
         divMainAnswer4.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        idElementsNew.push(dataLists[i].id);
       }
     } else {
       if (dataLists[i].var === 4) {
@@ -350,14 +377,14 @@ function checkAnswer() {
     if (inputAnswer5.checked) {
       if (dataLists[i].var === 5) {
         j++;
-        i = errorsAnswers[j];
-        if (errorsAnswers.length !== j) {
+        i = idElementsNew[j];
+        if (idElementsNew.length !== j) {
           checkTheme();
         }
         return;
       } else {
         divMainAnswer5.classList.add("main__color_false");
-        errorsAnswers.push(dataLists[i].id);
+        idElementsNew.push(dataLists[i].id);
       }
     } else {
       if (dataLists[i].var === 5) {

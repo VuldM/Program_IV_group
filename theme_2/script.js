@@ -8,15 +8,24 @@ async function fetchData(url) {
     console.error(`error -> ${error}`);
   }
 }
+function Shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+let arrayOld = [];
 let errorsAnswers = [];
 let j = 0;
 const dataLists = await fetchData(url);
 dataLists.forEach((element) => {
-  errorsAnswers[j] = element.id;
+  arrayOld[j] = element.id;
   j++;
 });
 const mainTasks = document.querySelector(".main__tasks");
 j = 0;
+errorsAnswers = Shuffle(arrayOld);
 let i = errorsAnswers[j];
 checkTheme();
 backLight();
@@ -34,23 +43,14 @@ function checkTheme() {
   <div class="main__question"><p>${dataLists[i].question}</p></div>
 `
   );
-  if (dataLists[i].answer1) {
-    if (dataLists[i].check) {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        `<div class="main__radio_1">
-        <input type="checkbox" name="answer" id="answer_01" />
-       <label for="answer_01"
-         ><div class="main__answer_1 main__radio_joint">
-           <p>${dataLists[i].answer1}</p>
-         </div></label>
-    </div>
-      `
-      );
-    } else {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        `
+  const numberCount = [1, 2, 3, 4, 5, 6];
+  let displayEl = Shuffle(numberCount);
+  displayEl.forEach((element) => {
+    if (element === 1) {
+      if (dataLists[i].answer1) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          `
   <div class="main__radio_1">
   <input type="radio" name="answer" id="answer_01" />
  <label for="answer_01"
@@ -58,28 +58,14 @@ function checkTheme() {
      <p>${dataLists[i].answer1}</p>
    </div></label>
   `
-      );
+        );
+      }
     }
-  }
-  if (dataLists[i].answer2) {
-    if (dataLists[i].check) {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        `
-    </div>
-    <div class="main__radio_2">  
-    <input type="checkbox" name="answer" id="answer_02" />
-    <label for="answer_02"
-      ><div class="main__answer_2 main__radio_joint">
-        <p>${dataLists[i].answer2}</p>
-      </div></label>
-  
-    `
-      );
-    } else {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        `
+    if (element === 2) {
+      if (dataLists[i].answer2) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          `
   </div>
   <div class="main__radio_2">  
   <input type="radio" name="answer" id="answer_02" />
@@ -89,27 +75,14 @@ function checkTheme() {
     </div></label>
 
   `
-      );
+        );
+      }
     }
-  }
-  if (dataLists[i].answer3) {
-    if (dataLists[i].check) {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        `
-    </div>
-    <div class="main__radio_3">
-     <input type="checkbox" name="answer" id="answer_03" />
-    <label for="answer_03"
-      ><div class="main__answer_3 main__radio_joint">
-        <p>${dataLists[i].answer3}</p>
-      </div></label>  
-    `
-      );
-    } else {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        `
+    if (element === 3) {
+      if (dataLists[i].answer3) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          `
     </div>
     <div class="main__radio_3">
      <input type="radio" name="answer" id="answer_03" />
@@ -118,27 +91,14 @@ function checkTheme() {
         <p>${dataLists[i].answer3}</p>
       </div></label>  
     `
-      );
+        );
+      }
     }
-  }
-  if (dataLists[i].answer4) {
-    if (dataLists[i].check) {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        ` </div>
-        <div class="main__radio_4">
-         <input type="checkbox" name="answer" id="answer_04" />
-        <label for="answer_04"
-          ><div class="main__answer_4 main__radio_joint">
-            <p>${dataLists[i].answer4}</p>
-          </div></label>
-        </div>       
-        `
-      );
-    } else {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        ` </div>
+    if (element === 4) {
+      if (dataLists[i].answer4) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          ` </div>
       <div class="main__radio_4">
        <input type="radio" name="answer" id="answer_04" />
       <label for="answer_04"
@@ -147,27 +107,14 @@ function checkTheme() {
         </div></label>
       </div>       
       `
-      );
+        );
+      }
     }
-  }
-  if (dataLists[i].answer5) {
-    if (dataLists[i].check) {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        ` </div>
-     <div class="main__radio_5">
-      <input type="checkbox" name="answer" id="answer_05" />
-     <label for="answer_05"
-       ><div class="main__answer_5 main__radio_joint">
-         <p>${dataLists[i].answer5}</p>
-       </div></label>
-     </div>       
-     `
-      );
-    } else {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        ` </div>
+    if (element === 5) {
+      if (dataLists[i].answer5) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          ` </div>
      <div class="main__radio_5">
       <input type="radio" name="answer" id="answer_05" />
      <label for="answer_05"
@@ -176,27 +123,14 @@ function checkTheme() {
        </div></label>
      </div>       
      `
-      );
+        );
+      }
     }
-  }
-  if (dataLists[i].answer6) {
-    if (dataLists[i].check) {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        ` </div>
-       <div class="main__radio_6">
-        <input type="checkbox" name="answer" id="answer_06" />
-       <label for="answer_06"
-         ><div class="main__answer_6 main__radio_joint">
-           <p>${dataLists[i].answer6}</p>
-         </div></label>
-       </div>       
-       `
-      );
-    } else {
-      mainInsert.insertAdjacentHTML(
-        "beforeend",
-        ` </div>
+    if (element === 6) {
+      if (dataLists[i].answer6) {
+        mainInsert.insertAdjacentHTML(
+          "beforeend",
+          ` </div>
      <div class="main__radio_6">
       <input type="radio" name="answer" id="answer_06" />
      <label for="answer_06"
@@ -205,9 +139,10 @@ function checkTheme() {
        </div></label>
      </div>       
      `
-      );
+        );
+      }
     }
-  }
+  });
   mainInsert.insertAdjacentHTML(
     "beforeend",
     ` <div class="buttuns">
@@ -230,7 +165,7 @@ function checkTheme() {
       backLight();
     }
     if (errorsAnswers.length == j) {
-      alert("Вы закончили курс");
+      alert("Вы закончили эту тему");
       window.location = "../index.html";
       return;
     }
@@ -238,8 +173,10 @@ function checkTheme() {
   backQuest.addEventListener("click", () => {
     if (j > 0) {
       j--;
-      i--;
+      i = errorsAnswers[j];
       checkTheme();
+    } else {
+      alert("Вы достигли начала темы");
     }
   });
   backBtnEl.addEventListener("click", () => {

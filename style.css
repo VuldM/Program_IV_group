@@ -15,7 +15,7 @@
 }
 .header__content {
   font-family: "Roboto";
-  margin: 10px 50px 10px 50px;
+  margin: 50px 50px 10px 50px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -48,6 +48,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  margin-bottom: 50px;
 }
 .main__insert {
   padding-top: 25px;
