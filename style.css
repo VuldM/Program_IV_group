@@ -157,4 +157,58 @@
   width: 182px;
   height: 32px;
   background-color: #2d89dc;
+}
+
+@media (max-width: 1080px) {
+  header {
+    display: none;
+  }
+  .main {
+    margin-top: 20px;
+  }
+  .main__insert {
+    padding-top: 10px;
+  }
+  .main__tasks {
+    padding-top: 0;
+    padding-left: calc(18% - 100px);
+    padding-right: 5px;
+  }
+  .main__radio_1 {
+    padding-bottom: 1px;
+    display: flex;
+    gap: 20px;
+  }
+  .main__radio_2 {
+    padding-bottom: 1px;
+    display: flex;
+    gap: 20px;
+  }
+  .main__radio_3 {
+    padding-bottom: 1px;
+    display: flex;
+    gap: 20px;
+  }
+  .main__radio_4 {
+    padding-bottom: 1px;
+    display: flex;
+    gap: 20px;
+  }
+  .main__radio_5 {
+    padding-bottom: 1px;
+    display: flex;
+    gap: 20px;
+  }
+  .main__radio_6 {
+    padding-bottom: 1px;
+    display: flex;
+    gap: 20px;
+  }
+  .main__radio_joint p {
+    padding: 10px 25px;
+  }
+  .buttuns {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }/*# sourceMappingURL=style.css.map */

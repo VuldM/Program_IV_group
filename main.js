@@ -7,6 +7,7 @@ const mainTheme_6 = document.querySelector(".main__theme_6_btn");
 const mainTheme_7 = document.querySelector(".main__theme_7_btn");
 const mainTheme_8 = document.querySelector(".main__theme_8_btn");
 const mainTheme_9 = document.querySelector(".main__theme_9_btn");
+const triaiTest = document.querySelector(".test");
 
 mainTheme_1.addEventListener("click", function (e) {
   window.location = "./theme_1/theme_1.html";
@@ -34,4 +35,7 @@ mainTheme_8.addEventListener("click", function (e) {
 });
 mainTheme_9.addEventListener("click", function (e) {
   window.location = "./theme_9/theme_9.html";
+});
+triaiTest.addEventListener("click", function (e) {
+  window.location = "./test/test.html";
 });

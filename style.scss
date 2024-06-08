@@ -89,7 +89,6 @@
       user-select: none;
       font-family: Roboto;
       font-size: 16px;
-
       font-stretch: normal;
       font-style: normal;
       line-height: 1.54;
@@ -162,4 +161,59 @@
   width: 182px;
   height: 32px;
   background-color: #2d89dc;
+}
+@media (max-width: 1080px) {
+  header {
+    display: none;
+  }
+  .main {
+    margin-top: 20px;
+    &__insert {
+      padding-top: 10px;
+    }
+    &__tasks {
+      padding-top: 0;
+      padding-left: Calc(18% - 100px);
+      padding-right: 5px;
+    }
+    &__radio {
+      &_1 {
+        padding-bottom: 1px;
+        display: flex;
+        gap: 20px;
+      }
+      &_2 {
+        padding-bottom: 1px;
+        display: flex;
+        gap: 20px;
+      }
+      &_3 {
+        padding-bottom: 1px;
+        display: flex;
+        gap: 20px;
+      }
+      &_4 {
+        padding-bottom: 1px;
+        display: flex;
+        gap: 20px;
+      }
+      &_5 {
+        padding-bottom: 1px;
+        display: flex;
+        gap: 20px;
+      }
+      &_6 {
+        padding-bottom: 1px;
+        display: flex;
+        gap: 20px;
+      }
+      &_joint p {
+        padding: 10px 25px;
+      }
+    }
+  }
+  .buttuns {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

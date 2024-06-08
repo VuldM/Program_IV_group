@@ -48,9 +48,22 @@ function checkTheme() {
   displayEl.forEach((element) => {
     if (element === 1) {
       if (dataLists[i].answer1) {
-        mainInsert.insertAdjacentHTML(
-          "beforeend",
-          `
+        if (dataLists[i].check) {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            `
+    <div class="main__radio_1">
+    <input type="checkbox" name="answer" id="answer_01" />
+   <label for="answer_01"
+     ><div class="main__answer_1 main__radio_joint">
+       <p>${dataLists[i].answer1}</p>
+     </div></label>
+    `
+          );
+        } else {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            `
   <div class="main__radio_1">
   <input type="radio" name="answer" id="answer_01" />
  <label for="answer_01"
@@ -58,14 +71,30 @@ function checkTheme() {
      <p>${dataLists[i].answer1}</p>
    </div></label>
   `
-        );
+          );
+        }
       }
     }
     if (element === 2) {
       if (dataLists[i].answer2) {
-        mainInsert.insertAdjacentHTML(
-          "beforeend",
-          `
+        if (dataLists[i].check) {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            `
+    </div>
+    <div class="main__radio_2">  
+    <input type="checkbox" name="answer" id="answer_02" />
+    <label for="answer_02"
+      ><div class="main__answer_2 main__radio_joint">
+        <p>${dataLists[i].answer2}</p>
+      </div></label>
+  
+    `
+          );
+        } else {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            `
   </div>
   <div class="main__radio_2">  
   <input type="radio" name="answer" id="answer_02" />
@@ -75,30 +104,60 @@ function checkTheme() {
     </div></label>
 
   `
-        );
+          );
+        }
       }
     }
     if (element === 3) {
       if (dataLists[i].answer3) {
-        mainInsert.insertAdjacentHTML(
-          "beforeend",
-          `
-    </div>
-    <div class="main__radio_3">
-     <input type="radio" name="answer" id="answer_03" />
-    <label for="answer_03"
-      ><div class="main__answer_3 main__radio_joint">
-        <p>${dataLists[i].answer3}</p>
-      </div></label>  
-    `
-        );
+        if (dataLists[i].check) {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            `
+      </div>
+      <div class="main__radio_3">
+       <input type="checkbox" name="answer" id="answer_03" />
+      <label for="answer_03"
+        ><div class="main__answer_3 main__radio_joint">
+          <p>${dataLists[i].answer3}</p>
+        </div></label>  
+      `
+          );
+        } else {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            `
+      </div>
+      <div class="main__radio_3">
+       <input type="radio" name="answer" id="answer_03" />
+      <label for="answer_03"
+        ><div class="main__answer_3 main__radio_joint">
+          <p>${dataLists[i].answer3}</p>
+        </div></label>  
+      `
+          );
+        }
       }
     }
     if (element === 4) {
       if (dataLists[i].answer4) {
-        mainInsert.insertAdjacentHTML(
-          "beforeend",
-          ` </div>
+        if (dataLists[i].check) {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            ` </div>
+        <div class="main__radio_4">
+         <input type="checkbox" name="answer" id="answer_04" />
+        <label for="answer_04"
+          ><div class="main__answer_4 main__radio_joint">
+            <p>${dataLists[i].answer4}</p>
+          </div></label>
+        </div>       
+        `
+          );
+        } else {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            ` </div>
       <div class="main__radio_4">
        <input type="radio" name="answer" id="answer_04" />
       <label for="answer_04"
@@ -107,39 +166,70 @@ function checkTheme() {
         </div></label>
       </div>       
       `
-        );
+          );
+        }
       }
     }
     if (element === 5) {
       if (dataLists[i].answer5) {
-        mainInsert.insertAdjacentHTML(
-          "beforeend",
-          ` </div>
+        if (dataLists[i].check) {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            ` </div>
      <div class="main__radio_5">
-      <input type="radio" name="answer" id="answer_05" />
+      <input type="checkbox" name="answer" id="answer_05" />
      <label for="answer_05"
        ><div class="main__answer_5 main__radio_joint">
          <p>${dataLists[i].answer5}</p>
        </div></label>
      </div>       
      `
-        );
+          );
+        } else {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            ` </div>
+       <div class="main__radio_5">
+        <input type="radio" name="answer" id="answer_05" />
+       <label for="answer_05"
+         ><div class="main__answer_5 main__radio_joint">
+           <p>${dataLists[i].answer5}</p>
+         </div></label>
+       </div>       
+       `
+          );
+        }
       }
     }
     if (element === 6) {
       if (dataLists[i].answer6) {
-        mainInsert.insertAdjacentHTML(
-          "beforeend",
-          ` </div>
+        if (dataLists[i].check) {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            ` </div>
      <div class="main__radio_6">
-      <input type="radio" name="answer" id="answer_06" />
+      <input type="checkbox" name="answer" id="answer_06" />
      <label for="answer_06"
        ><div class="main__answer_6 main__radio_joint">
          <p>${dataLists[i].answer6}</p>
        </div></label>
      </div>       
      `
-        );
+          );
+        } else {
+          mainInsert.insertAdjacentHTML(
+            "beforeend",
+            ` </div>
+       <div class="main__radio_6">
+        <input type="radio" name="answer" id="answer_06" />
+       <label for="answer_06"
+         ><div class="main__answer_6 main__radio_joint">
+           <p>${dataLists[i].answer6}</p>
+         </div></label>
+       </div>       
+       `
+          );
+        }
       }
     }
   });
@@ -304,7 +394,6 @@ function checkAnswer() {
         check_1 = true;
         if (dataLists[i].var.one) {
           //если первый варриант правильный
-
           divMainAnswer1.classList.add("main__color_true");
         } else {
           // если этот варриант не правильный
