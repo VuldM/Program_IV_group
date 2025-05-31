@@ -570,7 +570,7 @@ function checkAnswer() {
       }
     } else {
       if (dataLists[i].var === 6) {
-        divMainAnswer5.classList.add("main__color_true");
+        divMainAnswer6.classList.add("main__color_true");
       }
     }
   }
